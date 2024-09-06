@@ -1,0 +1,212 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+
+/* Ensure the body is scrollable if content overflows */
+body {
+    overflow-y: auto;
+    background: linear-gradient(to right, #58e4e6, #fd9f9d); /* Soft gradient */
+    color: #333; /* Ensure text color contrasts well with background */
+}
+
+/* Layout for header and content */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    height: 100%;
+    padding: 20px;
+}
+
+/* Company Name Styling */
+
+.company-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(207, 54, 164);
+    color: white;
+    padding: 10px 30px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    width: 300px;
+    height: 60px;
+    max-width: 300px;
+    margin: 20px auto;
+}
+
+.company-name h1 {
+    font-size: 18px; /* Larger font size */
+    font-weight: bold; /* Make the text bold */
+    color: white; /* Ensure the text is white */
+    margin: 0; /* Remove default margin */
+    padding: 10px 0; /* Add some padding around the text */
+    text-align: center; /* Center the text */
+    text-transform: uppercase; /* Convert text to uppercase */
+    letter-spacing: 2px; /* Add space between letters */
+}
+
+/* General Text Styling */
+p {
+    text-align: center;
+    padding: 10px;
+}
+
+/* Dashed line styling */
+.dashed-line {
+    border: none;
+    border-top: 2px dashed #ff6347;
+    width: 25%;
+    margin: 20px auto;
+}
+
+h2 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Leadership Team Styling */
+.leadership-team {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(207, 54, 164);
+    color: white;
+    padding: 10px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    width: 600px;
+    height: 50px;
+    max-width: 600px;
+    margin: 20px auto;
+    
+    
+}
+.leadership-team h2{
+    font-size: 20px; /* Larger font size */
+    font-weight: bold; /* Make the text bold */
+    color: white; /* Ensure the text is white */
+    margin: 0; /* Remove default margin */
+    padding: 10px 0; /* Add some padding around the text */
+    text-align: center; /* Center the text */
+    text-transform: uppercase; /* Convert text to uppercase */
+    letter-spacing: 2px; /* Add space between letters */
+}
+
+.development-team {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(207, 54, 164);
+    color: white;
+    padding: 5px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    width: 600px;
+    height: 50px;
+    max-width: 600px;
+    margin: 20px auto;
+}
+.development-team h2{
+    font-size: 20px; /* Larger font size */
+    font-weight: bold; /* Make the text bold */
+    color: white; /* Ensure the text is white */
+    margin: 0; /* Remove default margin */
+    padding: 10px 0; /* Add some padding around the text */
+    text-align: center; /* Center the text */
+    text-transform: uppercase; /* Convert text to uppercase */
+    letter-spacing: 2px; /* Add space between letters */
+}
+
+.sales-marketing-team {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(207, 54, 164);
+    color: white;
+    padding: 5px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    width: 600px;
+    height: 50px;
+    max-width: 600px;
+    margin: 20px auto;
+}
+.sales-marketing-team h2{
+    font-size: 20px; /* Larger font size */
+    font-weight: bold; /* Make the text bold */
+    color: white; /* Ensure the text is white */
+    margin: 0; /* Remove default margin */
+    padding: 10px 0; /* Add some padding around the text */
+    text-align: center; /* Center the text */
+    text-transform: uppercase; /* Convert text to uppercase */
+    letter-spacing: 2px; /* Add space between letters */
+}
+
+/* Team Members Grid */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  
+    gap: 10px;
+    justify-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.team-member {
+    text-align: center;
+    border: none;
+    padding: 10px;
+    max-width: 200px;
+    width: 100%;
+}
+
+.team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+
+
+/* Responsive Design for Smaller Devices */
+@media (max-width: 768px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    }
+
+    .company-name,
+    .leadership-team {
+        width: 90%; /* Increase width for smaller devices */
+    }
+}
+
+@media (max-width: 480px) {
+    .team-grid {
+        grid-template-columns: 1fr; /* 1 column on very small screens */
+    }
+}
